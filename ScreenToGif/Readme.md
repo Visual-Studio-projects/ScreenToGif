@@ -5,27 +5,25 @@ This is the current project of ScreenToGif.
 _VS 2017 and .Net 4.6.1 or newer required._
 
 
-## What's new? (Version 2.12)
+## What's new? (Version 2.17)
 
-• Remove frame duplicates: It's a feature that allows you to remove frames that are similar to its neighbors.   
-• Key Strokes: It's now possible to show the key presses before it actually happened.  (Failed)
-• Key Strokes: You can avoid displaying modifier keys while they are not part of a keyboard command.  
-• Key Strokes: You can add/remove/edit your keys strokes.  
-• If there's not enough space left on the drive, a warning message will appear on the editor window.  
-• You can now also control the zoom of the image by using a small up/down field at the bottom of the window.  
-• It's now possible to set the maximum age that a project can reach before being deleted automatically. It defaults to 5 days old.  
-• Updated Simplified Chinese, Portuguese, German, Italian, Polish and Danish translations.  
-• Upload of files via Yandex is now supported.  
+• You can now use different themes! Light, medium, dark and very dark are now available.  
+• New automated task: You can now create a task that alters the delay of each frame.  
+• Progress indicator: Now you can add the exact timestamp of each frame (based on the start date of the recording).  
+• When you start the app without any settings, the default folder where the frames are stored (Location folder) is now set to %temp% instead of a hardcoded path.   
+• Now you can use your arrow keys to move and resize the selection rectangles from the new recorder and from the Crop feature. Just use the three combinations of commands with Ctrl, Shift and arrow keys.  
+• Updated the Japanese translation.  
 
 ### Fixed:
 
-♦ While discarding the recording, the app would let you start a new recording before finishing erasing the files of the previous one.  
-♦ Encoding with Gifski (Note: It's now using a DLL instead of the executable).  
-♦ While adding overlays (Free Text, Free Drawing, Border...) with an image with a DPI not equal to the current DPI of the screen, the overlay content would not appear on the right position of the frame.  
-♦ The recorder window position was not being restored properly if the window was closed while it was on a secondary monitor.  
-♦ Encoder: Right-clicking to copy a video file was crashing the app.  
+♦ When removing duplicated frames, there was no indication that the process was still going on.  
+♦ When applying the KeyStrokes with a margin, it would result in a wrongly sized panel.  
+♦ If you cancelled the video import, the progress bar would not be hidden away and the app could crash.  
+♦ When creating a new blank project and trying to apply the Obfuscation feature, the app would crash, because of the image depth.  
 
 ### Known Bugs:
 
-♠ When saving a gif using the overwrite option while the output file has a usage lock, no error appears.  
-♠ The Cinemagraph feature is broken for high DPI PCs.  
+♠ Using an automated task to add the key strokes will still use the color and font settings from the main settings.  
+♠ When importing multiple images with different sizes at the same time, the app does not ask to resize all images to the same size.   
+♠ When exporting with FFmpeg, the last frame may be out of sync with the timmings of the project.  
+♠ With the new recorder UI: The Accept/Retry/Cancel commands are overflowing to the left when the selection is too small and to the left.  
